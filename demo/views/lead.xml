@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="partner_form_view">
+      <field name="name">partner.instructor</field>
+      <field name="model">crm.lead</field>
+      <field name="inherit_id" ref="crm.crm_lead_view_form" />
+      <field name="arch" type="xml">
+        <xpath expr="/form/header" position="inside">
+          <button name="create_new_demo" type="object" string="New demo" />
+        </xpath>
+        <xpath expr="/form/sheet/div[@name='button_box']" position="inside">
+          <!-- TODO -->
+          <button name="open_demos" type="object" class="oe_stat_button" icon="fa-id-card">
+            <div class="o_stat_info">
+              <field name="demo_count" class="o_stat_value"/>
+              <span class="o_stat_text" attrs="{'invisible': [('demo_count', '&lt;', 2)]}"> Demos</span>
+              <span class="o_stat_text" attrs="{'invisible': [('demo_count', '&gt;', 1)]}"> Demo</span>
+            </div>
+          </button>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

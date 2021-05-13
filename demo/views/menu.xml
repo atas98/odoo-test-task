@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <menuitem id="demo_demo_menu_root" name="Demo" web_icon="account,static/description/icon.png">
+      <menuitem id="demo_demo_menu_item" name="Demos" action="demo_demo_action" />
+    </menuitem>
+  </data>
+</odoo>
