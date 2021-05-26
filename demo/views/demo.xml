@@ -50,7 +50,7 @@
           <header>
             <button string="Complete" type="object" name="action_complete" states="planned" class="oe_highlight" />
             <button string="Cancel" type="object" name="action_cancel" states="planned" class="oe_warning" />
-            <field name="state" widget="statusbar" clickable="True" />
+            <field name="state" widget="statusbar" clickable="False" />
           </header>
           <sheet>
             <group>
